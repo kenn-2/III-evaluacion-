@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boleta de Viaje</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://firebasestorage.googleapis.com/v0/b/cine-a9707.appspot.com/o/logo.png?alt=media&token=725031a8-574e-42df-a441-7eeb20ae1759" alt="Cruz del Sur Logo" class="logo">
+            <img src="https://firebasestorage.googleapis.com/v0/b/cine-a9707.appspot.com/o/banner.jfif?alt=media&token=962a3da2-44a7-456c-a81a-b9e15c13e37d" alt="Bus" class="header-image">
+        </div>
+        <h2>El placer de viajar en Bus</h2>
+        <div class="content">
+            <div class="bus-image">
+                <img src="https://firebasestorage.googleapis.com/v0/b/cine-a9707.appspot.com/o/unidad.png?alt=media&token=c62542f1-8c44-4855-ab1c-0e7d7064d96c" alt="Cruz del Sur Bus">
+            </div>
+            <div class="form-container">
+                <h3>BOLETA DE VIAJE</h3>
+                <div class="ruc">
+                    <span>RUC</span>
+                    <span>78542212010</span>
+                </div>
+                <form id="ticket-form">
+                    <div class="columns">
+                        <div class="left-column">
+                            <div class="form-group">
+                                <label for="fecha">Fecha</label>
+                                <input type="date" id="fecha" name="fecha">
+                            </div>
+                            <div class="form-group">
+                                <label for="dni">DNI</label>
+                                <input type="text" id="dni" name="dni">
+                            </div>
+                            <div class="form-group">
+                                <label for="ruta">Ruta</label>
+                                <select id="ruta" name="ruta" onchange="updateTarifa()">
+                                    <option value="20">Lima - Mala</option>
+                                    <option value="25">Lima - Cañete</option>
+                                    <option value="30">Lima - Chincha</option>
+                                    <option value="40">Lima - Pisco</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="cantidad">Cantidad</label>
+                                <input type="number" id="cantidad" name="cantidad">
+                            </div>
+                            <div class="form-group">
+                                <label for="servicio">Servicio</label>
+                                <select id="servicio" name="servicio" onchange="updateTarifa()">
+                                    <option value="0">Económico</option>
+                                    <option value="0.1">Ejecutivo 10%</option>
+                                    <option value="0.15">Presidencial 15%</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="medio-pago">Medio Pago</label>
+                                <select id="medio-pago" name="medio-pago">
+                                    <option value="efectivo">Efectivo</option>
+                                    <option value="tarjeta-credito">Tarjeta crédito</option>
+                                    <option value="tarjeta-debito">Tarjeta débito</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="right-column">
+                            <div class="form-group">
+                                <label for="pasajero">Pasajero</label>
+                                <input type="text" id="pasajero" name="pasajero">
+                            </div>
+                            <div class="form-group">
+                                <label for="precio">Total s/</label>
+                                <input type="text" id="precio" name="precio" class="price" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="total-us">Total US</label>
+                                <input type="text" id="total-us" name="total-us" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group notice">
+                        <p>Si la cantidad es >= 3 se descuenta 1 pasaje</p>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" id="calcular" onclick="calcularTotal()">Calcular</button>
+                        <button type="reset">Limpiar</button>
+                        <button type="button" id="imprimir" onclick="window.print()">Imprimir</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

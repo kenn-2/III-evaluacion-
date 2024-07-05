@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 300px; 
+    height: auto;
+}
+
+.header-image {
+    width: calc(100% - 200px); 
+    height: auto;
+}
+
+h2 {
+    font-size: 32px;
+    color: #333;
+    margin: 20px 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.bus-image {
+    width: 55%;
+    height: auto;
+}
+
+.bus-image img {
+    width: 100%;
+    height: 410px;
+    border-radius: 20px;
+}
+
+.form-container {
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    width: 45%;
+    text-align: left;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    max-height: 500px;
+    overflow: auto;
+}
+
+.form-container h3 {
+    background-color: #d9edf7;
+    padding: 15px; 
+    margin: -20px -20px 10px -20px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 24px; 
+}
+
+.ruc {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-column,
+.right-column {
+    width: 48%;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.form-group label {
+    width: 40%;
+}
+
+.form-group input,
+.form-group select {
+    width: 55%;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.price {
+    background-color: #ccffcc;
+}
+
+.form-group.notice {
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+    margin-top: -10px;
+}
+
+.form-buttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background-color: darkgray;
+    color: white;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.form-buttons button:hover {
+    background-color: dimgray;
+    border-color: dimgrey;
+}
+
+.form-buttons button:active {
+    background-color: #003366;
+    border-color: #002244;
+}
+
+#total {
+    color: blue;
+}
+
+#total-us {
+    color: green;
+}
